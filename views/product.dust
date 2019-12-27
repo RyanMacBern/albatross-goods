@@ -1,0 +1,28 @@
+{>layout/}
+{<content}
+  {?product}
+    {#product}
+      <div class="product">
+        <h2>{title}</h2>
+        {?images}
+          <ul class="photos">
+            {#images}
+              {?.local}
+                <li><img class="image" src="{.local}" /></li>
+              {:else}
+                {?.remote}
+                  <li><img class="image" src="{.remote}" /></li>
+                {/.remote}
+              {/.local}
+            {/images}
+          </ul>
+        {/images}
+        {#offers}
+          <a href="{url}" target="_blank">{price}</a>
+        {/offers}
+      </div>
+    {/product}
+  {:else}
+    Product not found.
+  {/product}
+{/content}

@@ -1,0 +1,25 @@
+{>layout/}
+{<form}
+  <form method="post">
+    <input name="product[url]" placeholder="url" value="{product.url}"/><br>
+    <input name="product[title]" placeholder="title" value="{product.title}"/><br>
+    <input name="product[price]" placeholder="price" value="{product.price}"/><br>
+    <input name="product[images][0][remote]" placeholder="image" value="{product.image}" type="hidden"/>
+    <img src="{product.image}" width="300" /><br>
+    <button>Add Product</button>
+  </form>
+{/form}
+{<content}
+  <h2>{title}</h2>
+  {?addProduct}
+    {?error}
+      <p>{error}</p>
+      {+form/}
+    {:else}
+      <p>Product successfully added. <a href="/product?id={product._id}">View it now.</a></p>
+      <p><a href="/add-product">Add Another</a></p>
+    {/error}
+  {:else}
+    {+form/}
+  {/addProduct}
+{/content}

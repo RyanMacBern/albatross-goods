@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{title} - Albatross Goods</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="stylesheet" href="/css/base.css">
+    {+head/}
+  </head>
+ 
+  <body>
+    <h1>Albatross Goods</h1>
+    <h2>Better for you, better for the earth.</h2>
+    {>navbar/}
+    <div class="content">
+        {+content/}
+    </div>
+ 
+    <script src="/js/base.js"></script>
+    <script>
+        requirejs.config({
+            baseUrl: "/javascript"
+        });
+    </script>
+    {+script/}
+    </body>
+</html>

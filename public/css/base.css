@@ -1,0 +1,55 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: #222;
+  color: #bbb;
+}
+
+a, .link {
+  color: #00B7FF;
+  text-decoration: none;
+}
+a:hover, .link:hover {
+  text-decoration: underline;
+}
+
+ul.products, ul.products , .product ul {
+  list-style-type: none;
+  padding: 0;
+}
+ul.products li {
+  display: inline-block;
+}
+ul.products > li {
+  width: 200px;
+  height: 300px;
+  margin: 0 10px 10px 0;
+  text-align: center;
+}
+ul.products > li > a {
+  color: #bbb;
+  text-decoration: none;
+}
+ul.products > li > a:hover .title {
+  text-decoration: underline;
+}
+ul.products .image {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  background-size: cover;
+  background-color: #333;
+}
+ul.products .image[src=""] {
+  content:url("data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==");
+}
+ul.products .no-image {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  background: #333;
+  color: #666;
+  line-height: 200px;
+}
+  

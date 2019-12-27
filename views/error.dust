@@ -1,0 +1,8 @@
+{>layout/}
+{<content}
+  <h2>500 Error</h2>
+  {message}<br>
+  {error.status}<br>
+  {error.stack}
+{/content}
+

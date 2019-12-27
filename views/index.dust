@@ -1,0 +1,8 @@
+{>layout/}
+{<content}
+  <h2>{title}</h2>
+  <p>
+    This is a simple HTML page generated using Node.js and Dust.js, which loads CSS and JavaScript.<br/>
+    <a id="myLink" href="#">Click here to say hello</a> 
+  </p>
+{/content}

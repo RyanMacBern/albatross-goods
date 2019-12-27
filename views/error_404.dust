@@ -1,0 +1,6 @@
+{>layout/}
+{<content}
+  <h2>404 Not Found</h2>
+  <p>We're sorry, the requested resource could not be found.</p>
+{/content}
+

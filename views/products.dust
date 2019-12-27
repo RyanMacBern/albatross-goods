@@ -1,0 +1,37 @@
+{>layout/}
+{<content}
+  <h2>{title}</h2>
+  {?products}
+    <ul class="products">
+      {#products}
+        <li>
+          <a href="/product?id={_id}">
+            {?images}
+              <ul class="photos">
+                {#images}
+                  {?url}
+                    <li><img class="image" style="background-image:url('{url}')" src="/images/x.gif" /></li>
+                  {:else}
+                    {?remote}
+                      <li><img class="image" style="background-image:url('{remote}')" src="/images/x.gif" /></li>
+                    {:else}
+                      <li><span class="no-image">no image</span></li>
+                    {/remote}
+                  {/url}
+                {/images}
+              </ul>
+            {:else}
+              <span class="no-image">no image</span>
+            {/images}
+            <span class="link title">{title}</span>
+            <br/>
+            <span class="price">{price}</span>
+          </a>
+        </li>
+      {/products}
+    </ul>
+  {:else}
+    No products found.
+  {/products}
+  <p><a href="/add-product">Add Product</a></p>
+{/content}
