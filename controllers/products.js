@@ -1,18 +1,9 @@
-var express = require('express');
-var router = express.Router();
 var MongoClient = require('mongodb').MongoClient;
 var currencyFormatter = require('currency-formatter');
 
 var config = require('../config');
 
-const { products } = require('../controllers/products.js');
-
-/* GET products json */
-router.get('/', products);
-
-/* GET products view */
-router.get('/view', function(req, res, next) {
-
+exports.products = (req, res) => {
   MongoClient(config.db.url, config.db.options).connect((err, client) => {
     if (err) throw err
 
@@ -28,10 +19,7 @@ router.get('/view', function(req, res, next) {
         }
       });
 
-      res.render('products', { title: 'Products', products: products });
+      res.json({products});
     });
   });
-
-});
-
-module.exports = router;
+};
